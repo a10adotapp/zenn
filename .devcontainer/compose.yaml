@@ -1,0 +1,12 @@
+services:
+  app:
+    image: localhost/github.com/a10adotapp/zenn:dev
+    build:
+      context: ..
+      dockerfile: ./.devcontainer/Dockerfile
+    container_name: zenn-app
+    command: sleep infinity
+    volumes:
+      - ..:/home/vscode/zenn
+    ports:
+      - 8000:8000
